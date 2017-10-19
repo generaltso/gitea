@@ -46,6 +46,12 @@ type Repository struct {
 	Permissions   *Permission `json:"permissions,omitempty"`
 }
 
+type LanguageStat struct {
+	Language   string
+	Percentage float64
+	Color      string
+}
+
 // RepositoryList represents a list of API repository.
 // swagger:response RepositoryList
 type RepositoryList []*Repository

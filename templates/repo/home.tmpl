@@ -72,6 +72,10 @@
 		{{if .IsViewFile}}
 			{{template "repo/view_file" .}}
 		{{else}}
+            <ul>
+                <b>hello??</b>
+            {{range .Repository.Linguist}}<li>{{.}}</li>{{end}}
+            </ul>
 			{{template "repo/view_list" .}}
 		{{end}}
 	</div>

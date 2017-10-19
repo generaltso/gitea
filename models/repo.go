@@ -303,6 +303,10 @@ func (repo *Repository) innerAPIFormat(mode AccessMode, isParent bool) *api.Repo
 	}
 }
 
+func (repo *Repository) Linguist() []*api.LanguageStat {
+	return getLanguageStatistics()
+}
+
 func (repo *Repository) getUnits(e Engine) (err error) {
 	if repo.Units != nil {
 		return nil
